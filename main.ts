@@ -18,8 +18,8 @@
  * https://arcade.makecode.com/reference
  */
 namespace userconfig {
-export const ARCADE_SCREEN_WIDTH = 900
-export const ARCADE_SCREEN_HEIGHT = 1200
+export const ARCADE_SCREEN_WIDTH = 1024
+export const ARCADE_SCREEN_HEIGHT = 1024
 }
 tiles.setCurrentTilemap(tilemap `level`)
 let mysprite = sprites.create(img`. . . . . . f f f f . . . . . . 
@@ -46,5 +46,22 @@ game.onUpdate(() => {
     // Arcade games run at 30 FPS
 });
 browserEvents.Q.onEvent(browserEvents.KeyEvent.Pressed, function (){
-    
+    let armycharcter1 = sprites.create(img `. . . b b b b b b b b b . . . . 
+. . b 1 d d d d d d d 1 b . . . 
+. b 1 1 1 1 1 1 1 1 1 1 1 b . . 
+. b d b c c c c c c c b d b . . 
+. b d c 6 6 6 6 6 6 6 c d b . . 
+. b d c 6 d 6 6 6 6 6 c d b . . 
+. b d c 6 6 6 6 6 6 6 c d b . . 
+. b d c 6 6 6 6 6 6 6 c d b . . 
+. b d c 6 6 6 6 6 6 6 c d b . . 
+. b d c c c c c c c c c d b . . 
+. c b b b b b b b b b b b c . . 
+c b c c c c c c c c c c c b c . 
+c 1 d d d d d d d d d d d 1 c . 
+c 1 d 1 1 d 1 1 d 1 1 d 1 1 c . 
+c b b b b b b b b b b b b b c . 
+c c c c c c c c c c c c c c c . 
+`, SpriteKind.Enemy)
+    armycharcter1.changeScale(5,1)
 })
